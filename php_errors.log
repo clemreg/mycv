@@ -1,0 +1,8 @@
+[04-Feb-2019 13:26:31 UTC] PHP Warning:  Unterminated comment starting line 28 in /home/ubuntu/workspace/my_cv/src/Controller/LuckyController.php on line 28
+[04-Feb-2019 13:26:31 UTC] PHP Warning:  Unterminated comment starting line 28 in /home/ubuntu/workspace/my_cv/vendor/symfony/routing/Loader/AnnotationFileLoader.php on line 89
+[04-Feb-2019 13:27:43 UTC] PHP Warning:  Unterminated comment starting line 25 in /home/ubuntu/workspace/my_cv/src/Controller/LuckyController.php on line 25
+[04-Feb-2019 13:27:44 UTC] PHP Warning:  Unterminated comment starting line 25 in /home/ubuntu/workspace/my_cv/vendor/symfony/routing/Loader/AnnotationFileLoader.php on line 89
+[04-Feb-2019 13:29:06 UTC] PHP Warning:  Unterminated comment starting line 26 in /home/ubuntu/workspace/my_cv/src/Controller/LuckyController.php on line 26
+[04-Feb-2019 13:29:06 UTC] PHP Warning:  Unterminated comment starting line 26 in /home/ubuntu/workspace/my_cv/vendor/symfony/routing/Loader/AnnotationFileLoader.php on line 89
+[04-Feb-2019 13:30:25 UTC] PHP Warning:  Unterminated comment starting line 26 in /home/ubuntu/workspace/my_cv/src/Controller/LuckyController.php on line 26
+[04-Feb-2019 13:30:25 UTC] PHP Warning:  Unterminated comment starting line 26 in /home/ubuntu/workspace/my_cv/vendor/symfony/routing/Loader/AnnotationFileLoader.php on line 89
