@@ -6,10 +6,10 @@ use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Core\Annotation\ApiResource;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\LoisirsRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\ExperienceRepository")
  * @ApiResource
  */
-class Loisirs
+class Experience
 {
     /**
      * @ORM\Id()
@@ -21,55 +21,55 @@ class Loisirs
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $loisirs;
+    private $experience;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $type;
+    private $lieu;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $commentaires;
+    private $Commentaires;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getLoisirs(): ?string
+    public function getExperience(): ?string
     {
-        return $this->loisirs;
+        return $this->experience;
     }
 
-    public function setLoisirs(string $loisirs): self
+    public function setExperience(string $experience): self
     {
-        $this->loisirs = $loisirs;
+        $this->experience = $experience;
 
         return $this;
     }
 
-    public function getType(): ?string
+    public function getLieu(): ?string
     {
-        return $this->type;
+        return $this->lieu;
     }
 
-    public function setType(string $type): self
+    public function setLieu(string $lieu): self
     {
-        $this->type = $type;
+        $this->lieu = $lieu;
 
         return $this;
     }
 
     public function getCommentaires(): ?string
     {
-        return $this->commentaires;
+        return $this->Commentaires;
     }
 
-    public function setCommentaires(string $commentaires): self
+    public function setCommentaires(string $Commentaires): self
     {
-        $this->commentaires = $commentaires;
+        $this->Commentaires = $Commentaires;
 
         return $this;
     }

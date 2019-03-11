@@ -6,3 +6,4 @@
 [04-Feb-2019 13:29:06 UTC] PHP Warning:  Unterminated comment starting line 26 in /home/ubuntu/workspace/my_cv/vendor/symfony/routing/Loader/AnnotationFileLoader.php on line 89
 [04-Feb-2019 13:30:25 UTC] PHP Warning:  Unterminated comment starting line 26 in /home/ubuntu/workspace/my_cv/src/Controller/LuckyController.php on line 26
 [04-Feb-2019 13:30:25 UTC] PHP Warning:  Unterminated comment starting line 26 in /home/ubuntu/workspace/my_cv/vendor/symfony/routing/Loader/AnnotationFileLoader.php on line 89
+[18-Feb-2019 13:44:56 UTC] PHP Fatal error:  Class 'App\Controller\Controller' not found in /home/ubuntu/workspace/my_cv/src/Controller/LuckyController.php on line 59

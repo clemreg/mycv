@@ -18,18 +18,17 @@
 <div id="cv" class="instaFade">
 	<div class="mainDetails">
 		<div id="headshot" class="quickFade">
-			<img src="{{asset('image/bjr.jpg')}}" alt="Alan Smith" />
+			<img src="{{asset('image/téléchargement.jpg')}}" alt="Alan Smith" />
 		</div>
 		
 		<div id="name">
-			<h1 class="quickFade delayTwo">BONJUUURRR</h1>
-			<h2 class="quickFade delayThree">Job Title {{number}}</h2>
+			<h1 class="quickFade delayTwo">Clément REGUILLON</h1>
 		</div>
 		
 		<div id="contactDetails" class="quickFade delayFour">
 			<ul>
 				<li>E-mail : <a href="mailto:joe@bloggs.com" target="_blank">clem.reg1305@gmail.com</a></li>
-				<li>E-portfolio: <a href="https://clemreg1305.wixsite.com/mon-eportfoliow.bloggs.com">https://clemreg1305.wixsite.com/mon-eportfolio</a></li>
+				<li>E-portfolio: <a href="https://clemreg1305.wixsite.com/mon-eportfolio">https://clemreg1305.wixsite.com/mon-eportfolio</a></li>
 				<li>Num : 06 66 22 91 45</li>
 			</ul>
 		</div>
@@ -37,86 +36,117 @@
 	</div>
 	
 	<div id="mainArea" class="quickFade delayFive">
+		
+		
+		
 		<section>
 			<article>
 				<div class="sectionTitle">
-					<h1>Personal Profile</h1>
+					<h1>Experiences Professionnelles </h1>
 				</div>
 				
 				<div class="sectionContent">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor metus, interdum at scelerisque in, porta at lacus. Maecenas dapibus luctus cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
+					<article>
+					{% for Experience in experiences %}
+					<h4>{{ Experience.getExperience()}}</h4>
+					<p class="subDetails">{{ Experience.getLieu }}</p>
+					<p>{{ Experience.getCommentaires() }}</p>
+					<a href="{{ path('experience_edit', {'id' : Experience.getId ()})  }}">Modifier l'experience</a>
+					<a href="{{ path('experience_delete', {'id' : Experience.getId ()})  }}">Supprimer l'experience</a>
+					{% endfor %}
+					<a href="{{ path('experience_new') }}">Ajouter une experience</a>
+					</article>
 				</div>
 			</article>
 			<div class="clear"></div>
 		</section>
 		
-		
 		<section>
 			<div class="sectionTitle">
-				<h1>Work Experience</h1>
+				<h1>Mes loisirs</h1>
 			</div>
 			
 			<div class="sectionContent">
-				<article>
-					<h2>Job Title at Company</h2>
-					<p class="subDetails">April 2011 - Present</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
-				</article>
-				
-				<article>
-					<h2>Job Title at Company</h2>
-					<p class="subDetails">Janruary 2007 - March 2011</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
-				</article>
-				
-				<article>
-					<h2>Job Title at Company</h2>
-					<p class="subDetails">October 2004 - December 2006</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
-				</article>
+				{% for loisirs in loisirs %}
+						<h2>{{ loisirs.getLoisirs()}}</h2>
+						<p class="subDetails">{{ loisirs.getType }}</p>
+						<p>{{ loisirs.getCommentaires }}</p>
+						<a href="{{ path('loisirs_edit', {'id' : loisirs.getId ()})  }}">Modifier le loisir</a>
+						<a href="{{ path('loisirs_delete', {'id' : loisirs.getId ()})  }}">Supprimer le loisir</a>
+						{% endfor %}
+				<a href="{{ path('loisirs_new') }}">Ajouter un loisir</a>
 			</div>
 			<div class="clear"></div>
 		</section>
 		
-		
 		<section>
 			<div class="sectionTitle">
-				<h1>Key Skills</h1>
-			</div>
-			
-			<div class="sectionContent">
-				<ul class="keySkills">
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-				</ul>
-			</div>
-			<div class="clear"></div>
-		</section>
-		
-		
-		<section>
-			<div class="sectionTitle">
-				<h1>Education</h1>
+				<h1>Mes formations</h1>
 			</div>
 			
 			<div class="sectionContent">
 				<div class="col-md-9 col-sm-9 col-xs-12">
 					<ul>
 						{% for formation in formations %}
-						<li>{{ formation.getName()}}</li>
+						<h2>{{ formation.getName()}}</h2>
+						<p  class="subDetails">{{ formation.getLieu }}</p>
+						<p>{{ formation.getCommentaires }}</p>
+						<a href="{{ path('formation_edit', {'id' : formation.getId ()})  }}">Modifier la formatione</a>
+						<a href="{{ path('formation_delete', {'id' : formation.getId ()})  }}">Supprimer la formation</a>
 						{% endfor %}
-					</ul>				
+						<a href="{{ path('formation_new') }}">Ajouter une formation</a>
+					</ul>
+					
 				</div>
 			</div>
 			<div class="clear"></div>
 		</section>
 		
+		<section>
+			<div class="sectionTitle">
+				<h1>Contact</h1>
+			</div>
+			
+				<head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"></head>
+				<br />
+				<div class="inner contact">
+				                <!-- Form Area -->
+				                <div class="contact-form">
+				                    <!-- Form -->
+				                    <form id="contact-us" method="post" action="#">
+				                        <!-- Left Inputs -->
+				                        <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
+				                            <!-- Name -->
+				                            <input type="text" name="name" id="name" required="required" class="form" placeholder="Nom" />
+				                            <!-- Email -->
+				                            <input type="email" name="mail" id="mail" required="required" class="form" placeholder="Email" />
+				                        </div><!-- End Left Inputs -->
+				                        <!-- Right Inputs -->
+				                        <div class="col-xs-6 wow animated slideInRight" data-wow-delay=".5s">
+				                            <!-- Message -->
+				                            <textarea name="message" id="message" class="form textarea"  placeholder="Message"></textarea>
+				                        </div><!-- End Right Inputs -->
+				                        <!-- Bottom Submit -->
+				                        <div class="relative fullwidth col-xs-12">
+				                            <!-- Send Button -->
+				                            <button type="submit" id="submit" name="submit" class="form-btn semibold">Envoyer un Message</button> 
+				                        </div><!-- End Bottom Submit -->
+				                        <!-- Clear -->
+				                        <div class="clear"></div>
+				                    </form>
+				
+				                    <!-- Your Mail Message -->
+				                    <div class="mail-message-area">
+				                        <!-- Message -->
+				                        <div class="alert gray-bg mail-message not-visible-message">
+				                            <strong>Merci !</strong> Votre Email est envoyé !
+				                        </div>
+				                    </div>
+				
+				                </div><!-- End Contact Form Area -->
+				            </div><!-- End Inner -->
+			</div>
+		</section>
 	</div>
 </div>
 <script type="text/javascript">

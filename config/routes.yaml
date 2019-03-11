@@ -15,3 +15,6 @@ app_lucky_formation:
     path: /lucky/number
     controller: App\Controller\LuckyController::number
     
+admin:
+    path: /admin
+    controller: App\Controller\LuckyController::admin
