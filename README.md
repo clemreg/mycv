@@ -11,3 +11,7 @@ Pour lire le projet il suffit, de se connecter avec un compte Cloud9 et de lire 
 Vous pouvez a tous moment ajouter, modifier ou encore supprimer un loisir, une experiences ou une formation. 
 De plus il est possible de manipuler le code directement grace a cloud9 car il fait le lien avec une base de donnée PhpMyAdmin.
 Le code est régulièrement mis à jour sur Github.
+
+###Lien 
+
+Voici le lien de mon CV : https://symfony-clemreg.c9users.io/my_cv/public/index.php/lucky/number
